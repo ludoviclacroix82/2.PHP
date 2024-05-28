@@ -18,6 +18,9 @@ header, footer {
   padding: 0px 20px;
   display: flex;
   align-items: center; }
+  header img, footer img {
+    width: 32px;
+    margin-right: 5px; }
 
 main {
   width: 100%;
@@ -39,14 +42,13 @@ main {
     @media (min-width: 1024px) {
       main aside {
         width: 40%;
-        height: 100vh;
         align-items: baseline !important;
         border-bottom: 0px solid #c0c0c0;
         border-right: 1px solid #c0c0c0; } }
   main .excuses {
     width: 100%;
     padding: 50px;
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     color: #000; }
     @media (min-width: 1024px) {
       main .excuses {

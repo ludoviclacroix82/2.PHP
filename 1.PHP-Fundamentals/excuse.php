@@ -75,6 +75,7 @@
 
     ?>
     <header>
+        <img src='assets/images/icones/logo.png' alt="logo">
         The Alibi Generator
     </header>
     <main>
