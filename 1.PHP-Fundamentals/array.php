@@ -105,7 +105,7 @@
     $possible_hobbies_via_merge = array_merge($me['hobbies'], $soulMate['hobbies']);
     echo '<pre>';
     print_r($possible_hobbies_via_intersection);
-    print_r($possible_hobbies_via_merge);
+    print_r(array_unique($possible_hobbies_via_merge));    
     echo '</pre>';
 
 
