@@ -1,5 +1,7 @@
 # Exercices dans un outil de modélisation
 
+Cet exercice utilise l'outil [dbdiagram.io](https://dbdiagram.io/) pour créer et gérer des diagrammes de bases de données.
+
 ### Exercice 1: Gérer une collection de timbres
 - Fonctionnalités:
   - CRUD les timbres
