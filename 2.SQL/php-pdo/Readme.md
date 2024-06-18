@@ -40,4 +40,4 @@
   - CRUD les parties jouées
   - CRUD les championnats
 
-[Plus d'informations sur les outils de modélisation](/ressources/4.relational-db.png)
+[Plus d'informations sur les outils de modélisation](../ressources/4.relational-db.png)
