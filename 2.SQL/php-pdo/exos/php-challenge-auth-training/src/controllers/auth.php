@@ -1,5 +1,5 @@
 <?php
-require_once('/var/www/dev/2.The-Hill/2.PHP/2.SQL/php-pdo/exos/php-challenge-auth/src/config/dbConfig.php');
+require_once('/var/www/dev/2.The-Hill/2.PHP/2.SQL/php-pdo/exos/php-challenge-auth-training/src/config/dbConfig.php');
 
 
 function authentication(string $userName, string $password)

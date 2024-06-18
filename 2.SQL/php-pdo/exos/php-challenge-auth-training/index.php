@@ -23,6 +23,6 @@
     ?>   
       <a href="./src/public/logout.php">Logout</a>
     <?php endif;?>
-    | <a href="./src/controllers/create.php">Add</a> | <a href="./src/controllers/update.php">Update</a> | <a href="./src/controllers/delete.php">Delete</a> 
+    | <a href="./src/public/create.php">Add</a>| 
 </body>
 </html>
