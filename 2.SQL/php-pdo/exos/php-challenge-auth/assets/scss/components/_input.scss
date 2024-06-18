@@ -1,0 +1,10 @@
+label, select, input{
+    width: 150px;
+    display: inline-block;
+    margin: 5px 0;   
+  }
+  select,input{
+
+    appearance:auto;
+    border: 1px solid #ccc;
+  }

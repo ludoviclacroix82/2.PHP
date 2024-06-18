@@ -1,0 +1,21 @@
+button{
+    width: clamp(100px, 150px, 300px);
+    padding: 10px 10px;
+    background-color: #3779e8;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin-top: 10px;
+
+    &::first-letter{
+        text-transform: capitalize;
+    }
+    &:hover{
+        filter: brightness(0.7);
+        transition: all 0.5s;
+    }
+
+}
