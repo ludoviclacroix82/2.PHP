@@ -1,0 +1,22 @@
+@keyframes fadeOut {
+    0% {
+        display: flex;
+        left: -500px;
+
+    }
+
+    25% {
+        left: 20px;
+    }
+
+    75% {
+        //opacity: 1;
+        left: 20px;
+    }
+
+    100% {
+        display: none;
+        //opacity: 0;
+        left: -500px;
+    }
+}

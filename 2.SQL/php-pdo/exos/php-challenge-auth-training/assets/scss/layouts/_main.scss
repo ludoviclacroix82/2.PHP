@@ -1,0 +1,261 @@
+main {
+
+    .alert {
+        position: absolute;
+        top: 20px;
+        left: 500px;
+        z-index: 5;
+        min-width: 250px;
+        height: 40px;
+        border: 1px solid #ccc;
+        background-color: #fff;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:15px;
+        animation: fadeOut 3s linear forwards;
+
+        h2 {
+            @extend .poppins-regular;
+            color: #7e7e7e;
+            font-size: 0.8rem;
+            line-height: 0.8rem;
+            letter-spacing: 0.1rem;
+            text-transform: capitalize;
+        }
+    }
+
+    section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 50px 0px;
+
+        %row {
+            @extend .poppins-regular;
+            width: 10%;
+            color: #7e7e7e;
+            font-size: 0.65rem;
+            line-height: 0.8rem;
+            letter-spacing: 0.1rem;
+            text-align: center;
+        }
+
+        %nameHikking {
+            width: 60% !important;
+            display: flex;
+            justify-content: start;
+        }
+
+        %distance {
+            width: 10% !important;
+            text-align: right;
+        }
+
+        %height-difference {
+            width: 10% !important;
+            text-align: right;
+        }
+
+        %duree {
+            width: 10% !important;
+        }
+
+        .hikking {
+            width: 70%;
+            min-height: 300px;
+            margin-top: 80px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 30px;
+
+            .button {
+                width: 100%;
+                height: 30px;
+                padding: 20px 0px;
+                display: flex;
+                justify-content: end;
+                align-items: end;
+            }
+
+            h3 {
+                @extend .poppins-semibold;
+                width: 100%;
+                text-align: left;
+                padding: 30px 0px;
+                font-size: 1rem;
+            }
+
+
+            .header {
+                width: 100%;
+                height: 20px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #ccc;
+                padding: 0px 5px;
+
+                .row {
+                    @extend %row;
+                }
+
+                .nameHikking {
+                    @extend %nameHikking;
+                }
+
+                .distance {
+                    @extend %distance;
+                }
+
+                .duree {
+                    @extend %duree;
+                }
+
+            }
+
+            .list {
+                width: 100%;
+                height: 40px;
+                display: flex;
+                flex-direction: row;
+                border-bottom: 1px solid #ccc;
+                align-items: center;
+                background-color: #fff;
+                transition: background-color 0.5s ease;
+                padding: 0px 5px;
+
+                &:hover {
+                    background-color: #edebeb;
+                    transition: background-color 0.5s ease;
+                }
+
+                .row {
+                    @extend %row;
+                    font-size: 0.7rem;
+                }
+
+                .nameHikking {
+                    @extend %nameHikking;
+                    @extend .poppins-semibold;
+                    color: #505050;
+                    font-size: 0.7rem;
+                    justify-content: left;
+                    align-items: center;
+                    height: 100%;
+                }
+
+                .height-difference {
+                    @extend %height-difference;
+                }
+
+                .distance {
+                    @extend %distance;
+                }
+
+                .duree {
+                    @extend %duree;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                .tools {
+                    display: inline-flex;
+                    justify-content: end;
+
+                    img {
+                        cursor: pointer;
+                        margin-left: 10px;
+                    }
+                }
+
+            }
+
+        }
+
+
+        form {
+            min-width: 200px;
+            padding: 30px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 20px;
+
+            button {
+                float: right;
+            }
+
+            .tools {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                height: 60px;
+
+                h1 {
+                    @extend .poppins-regular;
+                    color: #7e7e7e;
+                    font-size: 0.9rem;
+                    line-height: 0.8rem;
+                    letter-spacing: 0.1rem;
+                    text-transform: uppercase;
+                }
+
+                a {
+                    @extend .poppins-regular;
+                    width: clamp(100px, 150px, 300px);
+                    padding: 10px 10px;
+                    background-color: #fff;
+                    border-radius: 5px;
+                    color: #505050;
+                    font-size: 0.8rem;
+                    letter-spacing: 0.05rem;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    border: 1px solid #ccc;
+                    text-decoration: none;
+
+                    &::first-letter {
+                        text-transform: capitalize;
+                    }
+
+                    &:hover {
+                        filter: brightness(0.9);
+                        transition: all 0.5s;
+                    }
+
+                }
+            }
+
+            label {
+                @extend .poppins-regular;
+                color: #7e7e7e;
+                font-size: 0.8rem;
+                line-height: 0.8rem;
+                letter-spacing: 0.1rem;
+                height: 25px;
+                width: 120px;
+                padding: 10px;
+                appearance: auto;
+                margin-right: 10px;
+            }
+
+            .control-form {
+                display: flex;
+                flex-direction: row;
+                justify-content: flex-start;
+
+                .name-input {
+                    width: 300px;
+                }
+            }
+
+        }
+    }
+}

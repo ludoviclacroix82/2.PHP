@@ -1,3 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;900&display=swap");
+.poppins-regular, button, input, nav a, main .alert h2, main section .hikking .header .row, main section .hikking .list .row, main section form .tools h1, main section form .tools a, main section form label {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-style: normal; }
+
+.poppins-semibold, main section .hikking h3, main section .hikking .list .nameHikking {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-style: normal; }
+
+.poppins-black {
+  font-family: "Poppins", sans-serif;
+  font-weight: 900;
+  font-style: normal; }
+
+@keyframes fadeOut {
+  0% {
+    display: flex;
+    left: -500px; }
+  25% {
+    left: 20px; }
+  75% {
+    left: 20px; }
+  100% {
+    display: none;
+    left: -500px; } }
 *, *::before, *::after {
   margin: 0;
   padding: 0;
@@ -322,27 +349,240 @@ template {
 button {
   width: clamp(100px, 150px, 300px);
   padding: 10px 10px;
-  background-color: #3779e8;
+  background-color: #fff;
   border-radius: 5px;
-  color: #fff;
+  color: #505050;
   font-size: 0.8rem;
   letter-spacing: 0.05rem;
   transition: all 0.5s;
   cursor: pointer;
-  margin-top: 10px; }
+  margin-top: 10px;
+  border: 1px solid #ccc; }
   button::first-letter {
     text-transform: capitalize; }
   button:hover {
-    filter: brightness(0.7);
+    filter: brightness(0.9);
     transition: all 0.5s; }
 
-label, select, input {
+select,
+input {
   width: 150px;
   display: inline-block;
   margin: 5px 0; }
 
-select, input {
+select {
+  border: 1px solid #ccc;
+  appearance: auto;
+  padding: 10px;
+  color: #7e7e7e;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  letter-spacing: 0.1rem; }
+
+input {
+  color: #7e7e7e;
+  font-size: 0.8rem;
+  line-height: 0.8rem;
+  letter-spacing: 0.1rem;
+  height: 25px;
+  padding: 10px;
   appearance: auto;
   border: 1px solid #ccc; }
+
+.disabled {
+  display: none; }
+
+.disabled {
+  display: none; }
+
+nav {
+  width: 100%;
+  height: 30px;
+  border-bottom: 1px solid #ccc; }
+  nav a {
+    width: clamp(100px, 150px, 300px);
+    height: 100%;
+    background-color: #fff;
+    color: #505050;
+    font-size: 0.8rem;
+    letter-spacing: 0.05rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    border-right: 1px solid #ccc;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    nav a::first-letter {
+      text-transform: capitalize; }
+    nav a:hover {
+      filter: brightness(0.9);
+      transition: all 0.5s; }
+
+footer {
+  width: 100%;
+  height: 30px;
+  border-top: 1px solid #ccc; }
+
+main .alert {
+  position: absolute;
+  top: 20px;
+  left: 500px;
+  z-index: 5;
+  min-width: 250px;
+  height: 40px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+  animation: fadeOut 3s linear forwards; }
+  main .alert h2 {
+    color: #7e7e7e;
+    font-size: 0.8rem;
+    line-height: 0.8rem;
+    letter-spacing: 0.1rem;
+    text-transform: capitalize; }
+main section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 0px; }
+  main section .hikking .header .row, main section .hikking .list .row {
+    width: 10%;
+    color: #7e7e7e;
+    font-size: 0.65rem;
+    line-height: 0.8rem;
+    letter-spacing: 0.1rem;
+    text-align: center; }
+  main section .hikking .header .nameHikking, main section .hikking .list .nameHikking {
+    width: 60% !important;
+    display: flex;
+    justify-content: start; }
+  main section .hikking .header .distance, main section .hikking .list .distance {
+    width: 10% !important;
+    text-align: right; }
+  main section .hikking .list .height-difference {
+    width: 10% !important;
+    text-align: right; }
+  main section .hikking .header .duree, main section .hikking .list .duree {
+    width: 10% !important; }
+  main section .hikking {
+    width: 70%;
+    min-height: 300px;
+    margin-top: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 30px; }
+    main section .hikking .button {
+      width: 100%;
+      height: 30px;
+      padding: 20px 0px;
+      display: flex;
+      justify-content: end;
+      align-items: end; }
+    main section .hikking h3 {
+      width: 100%;
+      text-align: left;
+      padding: 30px 0px;
+      font-size: 1rem; }
+    main section .hikking .header {
+      width: 100%;
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #ccc;
+      padding: 0px 5px; }
+    main section .hikking .list {
+      width: 100%;
+      height: 40px;
+      display: flex;
+      flex-direction: row;
+      border-bottom: 1px solid #ccc;
+      align-items: center;
+      background-color: #fff;
+      transition: background-color 0.5s ease;
+      padding: 0px 5px; }
+      main section .hikking .list:hover {
+        background-color: #edebeb;
+        transition: background-color 0.5s ease; }
+      main section .hikking .list .row {
+        font-size: 0.7rem; }
+      main section .hikking .list .nameHikking {
+        color: #505050;
+        font-size: 0.7rem;
+        justify-content: left;
+        align-items: center;
+        height: 100%; }
+      main section .hikking .list .duree {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+      main section .hikking .list .tools {
+        display: inline-flex;
+        justify-content: end; }
+        main section .hikking .list .tools img {
+          cursor: pointer;
+          margin-left: 10px; }
+  main section form {
+    min-width: 200px;
+    padding: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-top: 20px; }
+    main section form button {
+      float: right; }
+    main section form .tools {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      height: 60px; }
+      main section form .tools h1 {
+        color: #7e7e7e;
+        font-size: 0.9rem;
+        line-height: 0.8rem;
+        letter-spacing: 0.1rem;
+        text-transform: uppercase; }
+      main section form .tools a {
+        width: clamp(100px, 150px, 300px);
+        padding: 10px 10px;
+        background-color: #fff;
+        border-radius: 5px;
+        color: #505050;
+        font-size: 0.8rem;
+        letter-spacing: 0.05rem;
+        transition: all 0.5s;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        text-decoration: none; }
+        main section form .tools a::first-letter {
+          text-transform: capitalize; }
+        main section form .tools a:hover {
+          filter: brightness(0.9);
+          transition: all 0.5s; }
+    main section form label {
+      color: #7e7e7e;
+      font-size: 0.8rem;
+      line-height: 0.8rem;
+      letter-spacing: 0.1rem;
+      height: 25px;
+      width: 120px;
+      padding: 10px;
+      appearance: auto;
+      margin-right: 10px; }
+    main section form .control-form {
+      display: flex;
+      flex-direction: row;
+      justify-content: flex-start; }
+      main section form .control-form .name-input {
+        width: 300px; }
 
 /*# sourceMappingURL=style.css.map */

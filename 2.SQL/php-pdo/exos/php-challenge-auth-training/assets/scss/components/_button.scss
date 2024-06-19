@@ -1,20 +1,22 @@
 button{
+    @extend .poppins-regular;
     width: clamp(100px, 150px, 300px);
     padding: 10px 10px;
-    background-color: #3779e8;
+    background-color: #fff;
     border-radius: 5px;
-    color: #fff;
+    color: #505050;
     font-size: 0.8rem;
     letter-spacing: 0.05rem;
     transition: all 0.5s;
     cursor: pointer;
     margin-top: 10px;
+    border: 1px solid #ccc;
 
     &::first-letter{
         text-transform: capitalize;
     }
     &:hover{
-        filter: brightness(0.7);
+        filter: brightness(0.9);
         transition: all 0.5s;
     }
 
