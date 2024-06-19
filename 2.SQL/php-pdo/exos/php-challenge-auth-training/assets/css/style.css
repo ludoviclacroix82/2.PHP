@@ -443,8 +443,9 @@ main .alert {
     color: #7e7e7e;
     font-size: 0.8rem;
     line-height: 0.8rem;
-    letter-spacing: 0.1rem;
-    text-transform: capitalize; }
+    letter-spacing: 0.1rem; }
+    main .alert h2:first-letter {
+      text-transform: capitalize; }
 main section {
   width: 100%;
   display: flex;
