@@ -7,7 +7,7 @@ function selectDifficulty()
     return $selectDifficulty;
 }
 
-function modaleAction($session)
+function modaleAction( string $session)
 {
 
     switch ($session) {
