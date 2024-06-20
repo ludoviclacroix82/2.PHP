@@ -25,6 +25,17 @@ function allShowTypes()
 
     return $showTypes;
 }
+function clientsId(string $id)
+{
+
+    global $bdd;
+
+    $query = $bdd->prepare('SELECT * FROM clients WHERE id = :id');
+    $query->execute(['id' => intval($id)]);
+    $clients = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $clients;
+}
 function fidelityCLients()
 {
 
@@ -109,4 +120,14 @@ function genres(){
 
     return $genres;
 
+}
+
+function bookings(int $id){
+    global $bdd;
+
+    $query = $bdd->prepare('SELECT * FROM bookings WHERE id = :id');
+    $query->execute(['id' => intval($id)]);
+    $bookings = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $bookings;
 }
