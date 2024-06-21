@@ -12,13 +12,17 @@ switch ($action) {
         break;
     case 'bookingAll':
         deleteBookingstAll();
-        break;   
+        break;
+    case 'ticketsAll':
+        deletetTicketsAll();
+        break;
     default:
         break;
 }
 
 
-function  deleteClientAll(){
+function  deleteClientAll()
+{
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -31,21 +35,19 @@ function  deleteClientAll(){
                 'id' =>  htmlspecialchars(trim($id)),
             ];
             $queryDelete = "DELETE FROM clients WHERE id = :id";
-            $query= $bdd->prepare($queryDelete);
+            $query = $bdd->prepare($queryDelete);
             $query->execute($data);
         }
 
         try {
-
-
         } catch (PDOException $e) {
 
             echo "Erreur de connexion : " . $e->getMessage();
         }
     }
-
 }
-function  deleteBookingstAll(){
+function  deleteBookingstAll()
+{
 
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
@@ -58,19 +60,44 @@ function  deleteBookingstAll(){
                 'id' =>  htmlspecialchars(trim($id)),
             ];
             $queryDelete = "DELETE FROM bookings WHERE clientId = :id";
-            $query= $bdd->prepare($queryDelete);
+            $query = $bdd->prepare($queryDelete);
             $query->execute($data);
         }
 
         try {
-
-
         } catch (PDOException $e) {
 
             echo "Erreur de connexion : " . $e->getMessage();
         }
     }
+}
 
+function  deletetTicketsAll()
+{
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+        global $bdd;
+
+        $idTickets  = isset($_POST['id']) ? $_POST['id'] : '';
+
+        var_dump($idTickets);
+
+        foreach ($idTickets as  $id) {
+            $data = [
+                'id' =>  htmlspecialchars(trim($id)),
+            ];
+            $queryDelete = "DELETE FROM tickets WHERE id = :id";
+            $query = $bdd->prepare($queryDelete);
+            $query->execute($data);
+        }
+
+        try {
+        } catch (PDOException $e) {
+
+            echo "Erreur de connexion : " . $e->getMessage();
+        }
+    }
 }
 function securityInput($data)
 {
@@ -79,5 +106,3 @@ function securityInput($data)
     $data = htmlspecialchars($data);
     return $data;
 }
-
-?>

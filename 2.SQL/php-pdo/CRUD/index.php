@@ -47,6 +47,8 @@ try {
     /* PART2: Exercice 8 */
     $deleteBookings = [22, 21];
 
+    /* PART2: Exercice 8 */
+    $deleteTickets = [22, 21];
 } catch (PDOException $e) {
 
     echo "Erreur de connexion : " . $e->getMessage();
@@ -65,10 +67,12 @@ try {
         .crud1 {
             display: none;
         }
-        .column{
+
+        .column {
             display: flex;
             flex-direction: row;
         }
+
         .form .control-form {
             display: flex;
             flex-direction: column;
@@ -365,21 +369,48 @@ try {
         </div>
         <div class="control-form">
             <form class='delete' action="./src/controllers/delete.php?action=bookingAll" method="post">
-                <?php foreach ($deleteBookings as $id) : 
+                <?php foreach ($deleteBookings as $id) :
 
-                    $bookings=bookings($id);
+                    $bookings = bookings($id);
 
-                     foreach ($bookings as $booking) : ?>
-                <div class="input-form">
-                    <label for="id">Numéro réservation  :</label>
-                    <input type="text" id="id" name="id[]" value="<?= $booking['id']; ?>" required>
-                </div>
-                <div class="input-form">
-                    <label for="id">Numéro réservation  :</label>
-                    <input type="text" id="clientId" name="clientId[]" value="<?= $booking['clientId']; ?>" required>
-                </div>
-                <hr>
-                <?php 
+                    foreach ($bookings as $booking) : ?>
+                        <div class="input-form">
+                            <label for="id">Numéro réservation :</label>
+                            <input type="text" id="id" name="id[]" value="<?= $booking['id']; ?>" required>
+                        </div>
+                        <div class="input-form">
+                            <label for="id">Numéro réservation :</label>
+                            <input type="text" id="clientId" name="clientId[]" value="<?= $booking['clientId']; ?>" required>
+                        </div>
+                        <hr>
+                <?php
+                    endforeach;
+                endforeach;
+                ?>
+                <input type="submit" value="Modifier le client">
+            </form>
+        </div>
+        <div class="control-form">
+            <form class='delete' action="./src/controllers/delete.php?action=ticketsAll" method="post">
+                <?php foreach ($deleteTickets as $id) :
+
+                    $tickets = tickets($id);
+
+                    foreach ($tickets as $ticket) : ?>
+                        <div class="input-form">
+                            <label for="id">Numéro billets :</label>
+                            <input type="text" id="id" name="id[]" value="<?= $ticket['id']; ?>" required>
+                        </div>
+                        <div class="input-form">
+                            <label for="id">Prix:</label>
+                            <input type="text" id="price" name="price[]" value="<?= $ticket['price']; ?>" required>
+                        </div>
+                        <div class="input-form">
+                            <label for="id">numéro réservation:</label>
+                            <input type="text" id="bookingsId" name="bookingsId[]" value="<?= $ticket['bookingsId']; ?>" required>
+                        </div>
+                        <hr>
+                <?php
                     endforeach;
                 endforeach;
                 ?>
@@ -387,7 +418,6 @@ try {
             </form>
         </div>
     </section>
-
 </body>
 
 </html>

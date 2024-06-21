@@ -131,3 +131,14 @@ function bookings(int $id){
 
     return $bookings;
 }
+
+function tickets(int $idBookings){
+
+    global $bdd;
+
+    $query = $bdd->prepare('SELECT * FROM tickets WHERE bookingsId = :id');
+    $query->execute(['id' => intval($idBookings)]);
+    $tickets = $query->fetchAll(PDO::FETCH_ASSOC);
+
+    return $tickets;
+}
